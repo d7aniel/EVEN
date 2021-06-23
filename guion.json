@@ -1,0 +1,40 @@
+{"data" : [
+   {
+        "tiempo":"00:30",
+        "camara":"c_1",
+        "target":"t_1"
+   },
+   {
+        "tiempo":"00:45",
+        "nombre":"Este si tiene nombre",
+        "camara":"c_2",
+        "target":"o_torre"
+    },
+    {
+        "tiempo":"00:15",
+        "camara":"c_1",
+        "target":"t_2"
+     },
+     {
+        "tiempo":"1:30",
+        "camara":"c_1",
+        "target":"o_torre"
+     },
+     {
+        "tiempo":"2:00",
+        "camara":"c_2",
+        "target":"o_torre"
+     },
+     {
+        "tiempo":"2:43",
+        "nombre":"No se me me ocurren nombres",
+        "camara":[-5,0,5],
+        "target":"o_torre"
+     },
+     {
+        "tiempo":"3:00",
+        "camara":[5,0,5],
+        "target":[0,0,0]
+     }
+   ]
+}

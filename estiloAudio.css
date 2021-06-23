@@ -1,0 +1,163 @@
+/* Font Family
+================================================== */
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+
+
+/* Global Styles
+================================================== */
+
+html,body {
+-webkit-font-smoothing:antialiased;
+-webkit-text-size-adjust:100%;
+background-color:#070707;
+color:#fff;
+font-size:1rem;
+font-family:"Source Sans Pro", arial, sans-serif;
+font-weight:400;
+letter-spacing:.025rem;
+line-height:1.618;
+/* padding:1rem 0; */
+margin: 0px;
+padding: 0px;
+}
+
+*,::before,::after {
+box-sizing:border-box;
+}
+
+* {
+-webkit-tap-highlight-color:rgba(0, 0, 0, 0);
+-webkit-tap-highlight-color:transparent;
+}
+
+
+/* Setup
+================================================== */
+
+/* .container { position:relative; margin:0 auto; max-width:800px; width:100%; } */
+/* .column { width:inherit; } */
+
+/* Typography / Links
+================================================== */
+
+p { color:#fff; display:block; font-size:.9rem; font-weight:400; margin:0 0 2px; }
+
+a,a:visited { color:#8cc3e6; outline:0; text-decoration:underline; }
+a:hover,a:focus { color:#bbdef5; }
+p a,p a:visited { line-height:inherit; }
+
+
+/* Misc.
+================================================== */
+
+.add-bottom { margin-bottom:2rem !important; }
+.left { float:left; }
+.right { float:right; }
+.center { text-align:center; }
+.hidden { display:none; }
+
+/* .no-support {
+margin:2rem auto;
+text-align:center;
+width:90%;
+} */
+
+
+/* Audio Player Styles
+================================================== */
+
+audio {
+display:none;
+}
+
+#mainwrap{
+    /* z-index: 50; */
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    margin:0;
+    padding:0;
+    width:100%;
+}
+
+#audiowrap,
+#plwrap {
+    margin:0;
+    padding:0;
+}
+
+
+
+
+/* Plyr Overrides
+================================================== */
+
+.plyr--audio .plyr__controls {
+background-color:transparent;
+border:none;
+color:#fff;
+font-family:"Source Sans Pro", arial, sans-serif;
+padding:20px 20px 20px 13px;
+width:100%;
+}
+
+a.plyr__controls__item.plyr__control:hover,
+.plyr--audio .plyr__controls button:hover,
+.plyr--audio .plyr__controls button.tab-focus:focus,
+.plyr__play-large {
+background-color:rgba(0, 0, 0, .1);
+}
+
+.plyr__progress--played,
+.plyr__volume--display {
+color:rgba(0, 0, 0, .1);
+}
+
+.plyr--audio .plyr__progress--buffer,
+.plyr--audio .plyr__volume--display {
+background-color:rgba(0, 0, 0, .1);
+}
+
+.plyr--audio .plyr__progress--buffer {
+color:rgba(0, 0, 0, .1);
+}
+
+.plyr--full-ui input[type="range"] {
+width:calc(100% - 39px);
+}
+
+.plyr__controls .plyr__controls__item.plyr__time {
+font-size:14px;
+margin-left:7px;
+}
+
+
+/* Media Queries
+================================================== */
+
+/* @media only screen and (max-width:600px) {
+    #nowPlay span#npAction { display:none; }
+    #nowPlay span#npTitle { display:block; text-align:center; width:100%; }
+} */
+
+
+/* @import "compass/css3";
+
+.progress {
+  width: 100%;
+  height: 50px;
+}
+.progress-wrap {
+  background: #f80;
+  margin: 20px 0;
+  overflow: hidden;
+  position: relative;
+
+}
+.progress-wrap .progress-bar {
+  background: #ddd;
+  left: 0;
+  position: absolute;
+  top: 0;
+} */
