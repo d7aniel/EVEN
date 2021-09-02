@@ -1,13 +1,9 @@
 import * as THREE from 'https://unpkg.com/three@0.121.1/build/three.module.js';//'../threegit/build/three.module.js';;//'https://unpkg.com/three@0.118.3/build/three.module.js';//'../threeLibs/build/three.module.js';
 import {Mundo} from './Mundo.js'
 import {Objeto} from './Objeto.js'
-//import {cargarModelo} from './CargarModelo.js'
-//var guion;
-//var guionCargado = false;
 
 
-//import { OrbitControls } from 'https://unpkg.com/three@0.121.1/examples/jsm/controls/OrbitControls.js';
-console.log("hola three.js");
+var nombre_guion = "guiones/guion.json";
 var mundo;
 var cubo;
 var objeto;
@@ -18,21 +14,31 @@ function inicializar() {
     mundo = new Mundo();
     mundo.iluminar();
     mundo.crearOrbitControl();
-    //mesh = new Objeto(mundo);
-    //mesh = new THREE.Object3D()
-    //cargarModelo('modelos/modelo.glb', mundo, lista)
-    objeto = new Objeto(mundo);
-    //console.log(mundo.controls)
     document.addEventListener( 'keypress', onDocumentKeyPress );
-    fetch('guion.json').then(response => {
+    fetch(nombre_guion).then(response => {
        return response.json();
     }).then(function(data){
+        objeto = new Objeto(mundo,data.modelo);
+        return data;
+    }).then(function(data){
+        setAudio(data.audio);
+        console.log(data.audio);
         mundo.setGuion(data);
-        crearLista(mundo.guion);
+        console.log(mundo.guion);
+        crearLista(mundo.movimiento.guion);
     });
+}
 
+
+function onDocumentKeyPress( event ) {
+	const keyCode = event.which;
+	if ( String.fromCharCode( keyCode ) == 'a' ) {
+	}
+}
+
+function setAudio( archivoAudio ) {
     var cancion = document.createElement("source");
-    cancion.setAttribute("src", "https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3");
+    cancion.setAttribute("src", archivoAudio);//"https://raw.githubusercontent.com/muhammederdem/mini-player/master/mp3/3.mp3");
     document.getElementById("audiop").append(cancion);
 
     var supportsAudio = !!document.createElement('audio').canPlayType;
@@ -51,26 +57,11 @@ function inicializar() {
         });
     }
 
-    //audio = document.getElementById("audiop");
-    //console.log(audio);
-    //audio.on('timeupdate', function () {console.log("funciona uptate"+audio.currentTime)})
-    //audio.addEventListener('onmouseup',function () {console.log("funciona uptate"+audio.currentTime)})
 
     document.getElementsByClassName('plyr__progress')[0].addEventListener('mouseup',
     function () {
         mundo.setTiempo(audio.currentTime);
     });
-    /*document.addEventListener('on', event => {
-        const player = event.detail.plyr;
-        console.log(player);plyr__progress
-    });*/
-}
-
-
-function onDocumentKeyPress( event ) {
-	const keyCode = event.which;
-	if ( String.fromCharCode( keyCode ) == 'a' ) {
-	}
 }
 
 function crearLista(guion){
