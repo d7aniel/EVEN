@@ -2,14 +2,9 @@
     "modelo":"modelos/modelo2.glb",
     "data" :
         [
-            {
-                 "tiempo":"00:00",
-                 "camara":"c_2",
-                 "target":"fuente"
-            },
            {
-                "tiempo":"00:00.001",
-                "camara":"c_3",
+                "tiempo":"00:00",
+                "camara":[0,-5,5],
                 "duracion":3000,
                 "target":"fuente"
            },

@@ -28,7 +28,7 @@ export class Mundo{
 		this.controls.maxDistance = 1000;
     }
     iluminar(){
-        this.escena.add( new THREE.AmbientLight( 0x443333 ) );
+        this.escena.add( new THREE.AmbientLight( 0xffffff ) );
         var luzd = new THREE.DirectionalLight( 0xffddcc, 1 );
         luzd.position.set( 1, 0.75, 0.5 );
         this.escena.add( luzd );
