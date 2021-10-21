@@ -1,17 +1,23 @@
 {   "audio" : "audios/audio.mp3",
-    "modelo":"modelos/modelo2.glb",
-    "fondo":"rgb(255,0,0)",
+    "modelo":"modelos/modelo.glb",
+    "fondo":"rgb(0,20,50)",
     "data" :
         [
            {
-                "tiempo":"00:03",
-                "camara":"c_4",
-                "duracion":3000,
-                "target":"fuente"
+                "tiempo":"00:00",
+                "camara":"c_2",
+                "target":"fuente",
+                "nombre":"Primera cosa"
            },
            {
-                "tiempo":"00:06",
-                "camara":"c_5",
+                "tiempo":"00:03",
+                "camara":[0,0,-5],
+                "duracion":4000,
+                "target":[0,0,-5]
+           },
+           {
+                "tiempo":"00:05",
+                "camara":[0,0,-5],
                 "duracion":3000,
                 "target":"fuente"
            },

@@ -3,7 +3,7 @@ import {Mundo} from './Mundo.js'
 import {Objeto} from './Objeto.js'
 
 
-var nombre_guion = "guiones/guion.json";
+var nombre_guion = "guiones/guion00.json";
 var mundo;
 var cubo;
 var objeto;
@@ -22,9 +22,7 @@ function inicializar() {
         return data;
     }).then(function(data){
         setAudio(data.audio);
-        console.log(data.audio);
         mundo.setGuion(data);
-        console.log(mundo.guion);
         crearLista(mundo.movimiento.guion);
     });
 }

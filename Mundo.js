@@ -1,9 +1,9 @@
 import * as THREE from 'https://unpkg.com/three@0.121.1/build/three.module.js';
 import { OrbitControls } from 'https://unpkg.com/three@0.121.1/examples/jsm/controls/OrbitControls.js';
+import { RoomEnvironment } from 'https://unpkg.com/three@0.121.1/examples/jsm/environments/RoomEnvironment.js';
 import { Movimiento } from './Movimiento.js';
 export class Mundo{
     constructor(){
-        this.escena = new THREE.Scene();
         this.camara = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight,1,1000);
         this.camara.position.z = 5;
 
@@ -17,6 +17,14 @@ export class Mundo{
         this.movimiento = new Movimiento(this,this.reloj);
 
 
+        this.escena = new THREE.Scene();
+
+
+
+			// const scene = new THREE.Scene();
+			// scene.background = new THREE.Color( 0xbfe3dd );
+
+
         //this.usarOrbitControl = false;
     }
     setObjeto(obj){
@@ -28,13 +36,14 @@ export class Mundo{
 		this.controls.maxDistance = 1000;
     }
     iluminar(){
-        this.escena.add( new THREE.AmbientLight( 0xffffff ) );
+        //this.escena.add( new THREE.AmbientLight( 0xffffff ) );
         var luzd = new THREE.DirectionalLight( 0xffddcc, 1 );
         luzd.position.set( 1, 0.75, 0.5 );
         this.escena.add( luzd );
         var lud2 = new THREE.DirectionalLight( 0xccccff, 1 );
         lud2.position.set( - 1, 0.75, - 0.5 );
         this.escena.add( lud2 );
+        this.renderizador.back
     }
     animar(){
         // this.destinoCamara.position.x =  nCamara.x;
@@ -123,6 +132,16 @@ export class Mundo{
         this.movimiento.setGuion(guion);
         this.guionCargado = true;
         this.moverCamara(0);
+
+        const pmremGenerator = new THREE.PMREMGenerator( this.renderizador );
+        this.escena.background = new THREE.Color( 0xbfe3dd );
+        if(guion.hasOwnProperty("fondo")){
+            console.log(guion.fondo)
+            this.escena.background = new THREE.Color( guion.fondo );
+        }
+        this.escena.environment = pmremGenerator.fromScene( new RoomEnvironment(), 0.04 ).texture;
+
+
         /*this.guion = {};
         this.guion[0] = {
             "tiempo":0,
