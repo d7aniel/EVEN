@@ -1,69 +1,37 @@
-{   "audio" : "audios/audio.mp3",
-    "modelo":"modelos/modelo.glb",
+{   "audio" : "audios/audio2.mp3",
+    "modelo":"modelos/modelo0.glb",
     "fondo":"rgb(0,20,50)",
     "data" :
         [
-           {
-                "tiempo":"00:00",
-                "camara":"c_2",
-                "target":"fuente",
-                "nombre":"Primera cosa"
-           },
-           {
-                "tiempo":"00:03",
-                "camara":[0,0,-5],
-                "duracion":4000,
-                "target":[0,0,-5]
-           },
-           {
-                "tiempo":"00:05",
-                "camara":[0,0,-5],
-                "duracion":3000,
-                "target":"fuente"
-           },
-           {
-                "tiempo":"00:09",
-                "camara":"c_6",
-                "duracion":3000,
-                "target":"fuente"
-           },
-           {
-                "tiempo":"00:12",
-                "camara":"c_7'",
-                "duracion":3000,
-                "target":"fuente"
-           },
-           {
-                "tiempo":"00:15",
-                "camara":"c_8",
-                "duracion":3000,
-                "target":"fuente"
-           },
-           {
-                "tiempo":"00:18",
-                "camara":"c_9",
-                "duracion":3000,
-                "target":"fuente"
-           },
-           {
-                "tiempo":"00:21",
-                "nombre":"Secuencia A",
-                "camara":"c_10",
-                "duracion":5000,
-                "target":"fuente"
+            {
+                 "tiempo":"00:00",
+                 "camara":"c2",
+                 "target":"t1",
+                 "nombre":"Primera cosa"
             },
             {
-                 "tiempo":"00:24",
-                 "nombre":"Mirar Moneda",
-                 "camara":"c_10",
-                 "duracion":5000,
-                 "target":"moneda"
-             },
-             {
-                  "tiempo":"00:30",
-                  "nombre":"Mirar Moneda",
-                  "camara":"c_10z",
-                  "target":"moneda"
-              }
+                 "tiempo":"00:03",
+                 "camara":"c2",
+                 "target":"telefono",
+                 "nombre":"Segunda cosa"
+            },
+            {
+                 "tiempo":"00:06",
+                 "camara":"c2",
+                 "target":"telefono2",
+                 "nombre":"Tercera cosa"
+            },
+            {
+                 "tiempo":"00:09",
+                 "camara":"c1",
+                 "duracion":1000,
+                 "target":"t2"
+            },
+            {
+                 "tiempo":"00:11",
+                 "camara":"c3",
+                 "duracion":3000,
+                 "target":"t3"
+            }
         ]
 }

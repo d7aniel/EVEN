@@ -1,0 +1,25 @@
+{   "audio" : "audios/audio.mp3",
+    "modelo":"modelos/modelo1.glb",
+    "fondo":"rgb(0,20,50)",
+    "data" :
+        [
+           {
+                "tiempo":"00:00",
+                "duracion":2000,
+                "camara":[0,0,-15],
+                "target":[0,0,0]
+           },
+           {
+                "tiempo":"00:03",
+                "duracion":2000,
+                "camara":[0,0,-10],
+                "target":[0,0,0]
+           },
+           {
+                "tiempo":"00:06",
+                "duracion":4000,
+                "camara":[-10,0,-5],
+                "target":[0,0,0]
+           }
+        ]
+}
